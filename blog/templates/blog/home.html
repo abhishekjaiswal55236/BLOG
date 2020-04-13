@@ -1,0 +1,105 @@
+{% extends 'blog/base.html' %}
+{% block 'body' %}
+	<br><br><br>
+{% load static %}
+	<div class="container">
+
+  <!-- Page Heading -->
+  <h1 class="my-4">Topics
+    <small>explore on.....</small>
+  </h1>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<section id="team" class="pb-5">
+	<div class="container">
+			<div class="row">
+{% for topic in topics %}
+
+
+
+
+				<a href="{% url 'posts' topic.pk %}">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+									<div class="mainflip">
+											<div class="frontside">
+													<div class="card">
+															<div class="card-body text-center">
+																	<p><img class=" img-fluid" src="{{topic.image.url}}" alt="card image"></p>
+																	<h4 class="card-title">{{topic.heading}}</h4>
+																	<p class="card-text">{{topic.description}}</p>
+																	<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+															</div>
+													</div>
+											</div>
+											<div class="backside">
+													<div class="card">
+															<div class="card-body text-center mt-4">
+																	<a href="{% url 'posts' topic.pk %}">
+																	<h4 class="card-title">{{topic.heading}}</h4></a>
+																	<p class="card-text">{{topic.description}}</p>
+																	<ul class="list-inline">
+																			<li class="list-inline-item">
+																					<a class="social-icon text-xs-center" target="_blank" href="#">
+																							<i class="fa fa-facebook"></i>
+																					</a>
+																			</li>
+																			<li class="list-inline-item">
+																					<a class="social-icon text-xs-center" target="_blank" href="#">
+																							<i class="fa fa-twitter"></i>
+																					</a>
+																			</li>
+																			<li class="list-inline-item">
+																					<a class="social-icon text-xs-center" target="_blank" href="#">
+																							<i class="fa fa-skype"></i>
+																					</a>
+																			</li>
+																			<li class="list-inline-item">
+																					<a class="social-icon text-xs-center" target="_blank" href="#">
+																							<i class="fa fa-google"></i>
+																					</a>
+																			</li>
+																	</ul>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+					</div>
+				</a>
+
+{% endfor %}
+
+</div>
+</div>
+</section>
+
+  <!-- /.row -->
+
+  <!-- Pagination -->
+  <!-- <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+    </li>
+  </ul> -->
+
+</div>
+
+{% endblock %}
