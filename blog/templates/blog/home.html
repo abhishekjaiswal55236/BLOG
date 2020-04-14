@@ -11,63 +11,19 @@
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <section id="team" class="pb-5">
 	<div class="container">
-			<div class="row">
-{% for topic in topics %}
+		<div class="row">
+		{% for topic in topics %}
 
+			<div class="card" style="width: 18rem;">
+			<img src="{{ topic.image.url }}" class="card-img-top">
+			<div class="card-body">
+				<h5 class="card-title">{{topic.heading}}</h5>
+				<p class="card-text">{{topic.description}}</p>
+				<a href="{% url 'posts' topic.pk %}" class="btn btn-primary">See Posts</a>
+			</div>
+			</div>
 
-
-
-				<a href="{% url 'posts' topic.pk %}">
-					<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-									<div class="mainflip">
-											<div class="frontside">
-													<div class="card">
-															<div class="card-body text-center">
-																	<p><img class=" img-fluid" src="{{topic.image.url}}" alt="card image"></p>
-																	<h4 class="card-title">{{topic.heading}}</h4>
-																	<p class="card-text">{{topic.description}}</p>
-																	<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-															</div>
-													</div>
-											</div>
-											<div class="backside">
-													<div class="card">
-															<div class="card-body text-center mt-4">
-																	<a href="{% url 'posts' topic.pk %}">
-																	<h4 class="card-title">{{topic.heading}}</h4></a>
-																	<p class="card-text">{{topic.description}}</p>
-																	<ul class="list-inline">
-																			<li class="list-inline-item">
-																					<a class="social-icon text-xs-center" target="_blank" href="#">
-																							<i class="fa fa-facebook"></i>
-																					</a>
-																			</li>
-																			<li class="list-inline-item">
-																					<a class="social-icon text-xs-center" target="_blank" href="#">
-																							<i class="fa fa-twitter"></i>
-																					</a>
-																			</li>
-																			<li class="list-inline-item">
-																					<a class="social-icon text-xs-center" target="_blank" href="#">
-																							<i class="fa fa-skype"></i>
-																					</a>
-																			</li>
-																			<li class="list-inline-item">
-																					<a class="social-icon text-xs-center" target="_blank" href="#">
-																							<i class="fa fa-google"></i>
-																					</a>
-																			</li>
-																	</ul>
-															</div>
-													</div>
-											</div>
-									</div>
-							</div>
-					</div>
-				</a>
-
-{% endfor %}
+		{% endfor %}
 
 </div>
 </div>

@@ -25,7 +25,7 @@ SECRET_KEY = 'cr+n058vzo*u@vo+@k8t8q#udp^9w8msadvc2p85iv+jb6^n6c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['arcane-bastion-12770.herokuapp.com']
+ALLOWED_HOSTS = ['arcane-bastion-12770.herokuapp.com','localhost']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'finalblog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'finalblog',
+        'USER':'postgres',
+        'PASSWORD':'jxc91919',
+        'HOST':'localhost',
+        'PORT':'5432',
     }
 }
 
