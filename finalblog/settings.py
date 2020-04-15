@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'finalblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'finalblog',
-        'USER':'postgres',
-        'PASSWORD':'jxc91919',
-        'HOST':'localhost',
+        'NAME': 'd50smokpkv2njk',
+        'USER':'hfctwzqjglwddd',
+        'PASSWORD':'8dc8d68ca15d7491aa89d1b59710a05258e18068f0376648fb516b0b1efd8398',
+        'HOST':'ec2-23-20-129-146.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
