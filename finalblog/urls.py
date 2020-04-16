@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('topic/<int:topic_id>',views.posts,name="posts"),
     path('topic/<int:topic_id>/<int:post_id>',views.post,name="post"),
+    path('contactme/',views.contact,name="contact"),
+    path('about/',views.about,name='about'),
 ]
 
 urlpatterns += static(settings.STATIC_URL , document_root = settings.STATIC_ROOT)
