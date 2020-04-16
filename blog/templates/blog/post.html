@@ -9,12 +9,26 @@
 {% endblock %}
 {% block 'body' %}
 
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>{{post.title}}</h1>
+          <span class="subheading">{{post.description}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
   <!-- Post Content -->
   <article>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h2>{{post.title}}</h2>
           <p>{{post.content}}</p>
 
           <p>Created by
