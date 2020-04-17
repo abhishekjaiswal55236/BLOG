@@ -6,3 +6,5 @@ psycopg2-binary==2.8.5
 pytz==2019.3
 sqlparse==0.3.1
 whitenoise
+django-crispy-forms==1.9.0
+django-widget-tweaks==1.4.5

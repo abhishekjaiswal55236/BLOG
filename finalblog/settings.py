@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'cr+n058vzo*u@vo+@k8t8q#udp^9w8msadvc2p85iv+jb6^n6c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['arcane-bastion-12770.herokuapp.com','localhost']
 
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'authentication',
+    'crispy_forms',
+    'widget_tweaks',
 
 ]
 
@@ -133,3 +136,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT  = BASE_DIR
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = "/"
+
+LOGOUT_REDIRECT_URL = '/'

@@ -27,7 +27,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-default navbar-fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home'  %}">Abhishek Jaiswal</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,15 +45,31 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'contact' %}">Contact me</a>
           </li>
-          <li>
-            <div class="dropdown nav-item">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Topics
-              </button>
-              {% block 'topics' %}
-              {% endblock %}
-            </div>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Topics
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {%  block 'topics' %}
+            {% endblock %}
+          </div>
+        </li>
+          {% if user.is_authenticated %}
+            <li class = "nav-item">
+              <a class="nav-link float-right" href="{% url 'home' %}">{{user.username}}</a>
+            </li>
+            <li class = "nav-item">
+              <a class="nav-link float-right" href="{% url 'logout' %}">Logout</a>
+            </li>
+          {% else %}
+          <li class = "nav-item">
+            <a class="nav-link float-right" href="{% url 'register' %}">Register</a>
           </li>
+          <li class = "nav-item">
+            <a class="nav-link float-right" href="{% url 'login' %}">Login</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </div>

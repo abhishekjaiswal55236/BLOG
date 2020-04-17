@@ -1,13 +1,27 @@
 {% extends 'blog/base.html' %}
 
+{% block 'registration' %}
+{% if user.is_authenticated %}
+  <li>
+    <a class="nav-link" href="{% url 'home' %}">{{user.username}}</a>
+  </li>
+{% else %}
+<li>
+  <a class="nav-link" href="{% url 'register' %}">Register</a>
+</li>
+<li>
+  <a class="nav-link" href="{% url 'login' %}">Login</a>
+</li>
+{% endif %}
+{% endblock %}
+
+
 {% block 'topics' %}
-<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   {% for topic in all_topics %}
   <a class="dropdown-item" href="{% url 'posts' topic.pk  %}">{{topic.heading}}</a>
   {% endfor %}
-</div>
-
 {% endblock %}
+
 
 {% block 'body' %}
 
