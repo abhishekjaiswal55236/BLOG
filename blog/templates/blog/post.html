@@ -45,7 +45,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>{{post.content}}</p>
+          {{post.content | linebreaksbr}}
 
           <p>Created by
             <a href="{% url 'about' %}">{{post.author}}</a>. On
@@ -60,16 +60,16 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <h2>Similar Posts</h2>
+        <h4>Similar Posts</h4>
 {% for post in similar_posts %}
         <div class="post-preview">
           <a href="{% url 'post' topic.pk post.pk %}">
-            <h2 class="post-title">
+            <h5 class="post-title">
               {{post.title}}
-            </h2>
-            <h3 class="post-subtitle">
+            </h5>
+            <h7 class="post-subtitle">
               {{post.description}}
-            </h3>
+            </h7>
           </a>
           <p class="post-meta">Posted by
             <a href="#">{{topic.author.username}}</a>

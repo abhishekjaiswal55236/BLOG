@@ -31,7 +31,7 @@ def post(request,topic_id,post_id):
     this_topic = Topic.objects.get(pk=topic_id)
     post = Post.objects.get(pk=post_id)
     all_topics = Topic.objects.all()
-    similar_posts = post.tag.similar_objects()[:3]
+    similar_posts = post.tag.similar_objects()[:2]
     return render(request,'blog/post.html',{'topic':this_topic,'post':post,'all_topics':all_topics,'similar_posts':similar_posts})
 
 def contact(request):
