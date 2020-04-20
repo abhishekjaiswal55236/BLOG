@@ -32,8 +32,8 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>{{topic.heading}}</h1>
-          <span class="subheading">{{topic.description}}</span>
+          <h1># {{tag.name}}</h1>
+          <span class="subheading">Posts with Hashtag {{tag.name}}</span>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
 
 {% for post in posts %}
         <div class="post-preview">
-          <a href="{% url 'post' topic.pk post.pk %}">
+          <a href="{% url 'post' post.topic.pk post.pk %}">
             <h2 class="post-title">
               {{post.title}}
             </h2>
@@ -59,14 +59,13 @@
             <a href="#">{{topic.author.username}}</a>
             {{topic.created_on}}</p>
             <div class="post-meta">
-              {% for tag in post.tag.all %}
-                  <a href="{% url 'tag_posts' tag.name %}">{{tag.name}}</a>
+              {% for tagg in post.tag.all %}
+                  <a href="{% url 'tag_posts' tagg.name %}">{{tagg.name}}</a>
               {% endfor %}
             </div>
 
         </div>
         <hr>
-
 {% endfor %}
 
         <!-- Pager -->

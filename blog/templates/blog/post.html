@@ -57,4 +57,38 @@
 
   <hr>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h2>Similar Posts</h2>
+{% for post in similar_posts %}
+        <div class="post-preview">
+          <a href="{% url 'post' topic.pk post.pk %}">
+            <h2 class="post-title">
+              {{post.title}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.description}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">{{topic.author.username}}</a>
+            {{topic.created_on}}</p>
+            <div class="post-meta">
+              {% for tag in post.tag.all %}
+                  <a href="{% url 'tag_posts' tag.name %}">{{tag.name}}</a>
+              {% endfor %}
+            </div>
+
+        </div>
+        <hr>
+
+{% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+
+
 {% endblock %}

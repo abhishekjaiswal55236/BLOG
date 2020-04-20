@@ -29,6 +29,7 @@ urlpatterns = [
     path('about/',views.about,name='about'),
     path('register/',auth_views.register,name="register"),
     path('',include("django.contrib.auth.urls")),
+    path('tags/<str:tag_name>/',views.tag_posts,name="tag_posts"),
 ]
 
 urlpatterns += static(settings.STATIC_URL , document_root = settings.STATIC_ROOT)

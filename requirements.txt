@@ -8,3 +8,4 @@ sqlparse==0.3.1
 whitenoise
 django-crispy-forms==1.9.0
 django-widget-tweaks==1.4.5
+django-taggit==1.2.0

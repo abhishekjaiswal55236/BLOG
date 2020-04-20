@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'authentication',
     'crispy_forms',
     'widget_tweaks',
+    'taggit'
 
 ]
 
