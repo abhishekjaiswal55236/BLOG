@@ -41,9 +41,24 @@ INSTALLED_APPS = [
     'authentication',
     'crispy_forms',
     'widget_tweaks',
-    'taggit'
+    'taggit',
+    'ckeditor',
+    'ckeditor_uploader',
 
 ]
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar':'Custom',
+        'height' : 500,
+        'toolbar_Custom' : [
+            ['Bold','Link','Image','CodeSnippet'],
+        ],
+        'extraPlugins' : 'codesnippet',
+    }
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,6 +155,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/'

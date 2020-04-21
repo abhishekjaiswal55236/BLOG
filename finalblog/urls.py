@@ -30,6 +30,7 @@ urlpatterns = [
     path('register/',auth_views.register,name="register"),
     path('',include("django.contrib.auth.urls")),
     path('tags/<str:tag_name>/',views.tag_posts,name="tag_posts"),
+    path('ckeditor/',include('ckeditor_uploader.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL , document_root = settings.STATIC_ROOT)
