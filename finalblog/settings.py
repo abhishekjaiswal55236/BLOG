@@ -25,7 +25,7 @@ SECRET_KEY = 'cr+n058vzo*u@vo+@k8t8q#udp^9w8msadvc2p85iv+jb6^n6c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['arcane-bastion-12770.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['arcane-bastion-12770.herokuapp.com','localhost','abhishekjaiswal.net','www.abhishekjaiswal.net']
 
 
 # Application definition
