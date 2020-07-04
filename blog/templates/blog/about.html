@@ -17,7 +17,7 @@
 
 {% block 'topics' %}
   {% for topic in all_topics %}
-  <a class="dropdown-item" href="{% url 'posts' topic.pk  %}">{{topic.heading}}</a>
+  <a class="dropdown-item" href="{% url 'posts' topic.slug  %}">{{topic.heading}}</a>
   {% endfor %}
 {% endblock %}
 

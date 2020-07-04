@@ -23,12 +23,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('',views.home,name='home'),
     path('admin/', admin.site.urls),
-    path('topic/<int:topic_id>',views.posts,name="posts"),
-    path('topic/<int:topic_id>/<int:post_id>',views.post,name="post"),
     path('contactme/',views.contact,name="contact"),
     path('about/',views.about,name='about'),
     path('register/',auth_views.register,name="register"),
     path('',include("django.contrib.auth.urls")),
+    path('t/<str:topic_slug>/',views.posts,name="posts"),
+    path('t/<str:topic_slug>/<str:post_slug>/',views.post,name="post"),
     path('tags/<str:tag_name>/',views.tag_posts,name="tag_posts"),
     path('ckeditor/',include('ckeditor_uploader.urls')),
 ]

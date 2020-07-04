@@ -18,7 +18,7 @@
 
 {% block 'topics' %}
   {% for topic in all_topics %}
-  <a class="dropdown-item" href="{% url 'posts' topic.pk  %}">{{topic.heading}}</a>
+  <a class="dropdown-item" href="{% url 'posts' topic.slug  %}">{{topic.heading}}</a>
   {% endfor %}
 {% endblock %}
 
@@ -47,7 +47,7 @@
 
 {% for post in posts %}
         <div class="post-preview">
-          <a href="{% url 'post' post.topic.pk post.pk %}">
+          <a href="{% url 'post' post.topic.slug post.slug %}">
             <h2 class="post-title">
               {{post.title}}
             </h2>

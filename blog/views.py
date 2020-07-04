@@ -20,16 +20,16 @@ def tag_posts(request,tag_name):
 
 
 
-def posts(request , topic_id):
-    this_topic = Topic.objects.get(pk=topic_id)
+def posts(request , topic_slug):
+    this_topic = Topic.objects.get(slug=topic_slug)
     posts = Post.objects.filter(topic = this_topic)
     all_topics = Topic.objects.all()
     return render(request,'blog/home.html',{'posts':posts,'topic':this_topic,'all_topics':all_topics})
 
 
-def post(request,topic_id,post_id):
-    this_topic = Topic.objects.get(pk=topic_id)
-    post = Post.objects.get(pk=post_id)
+def post(request,topic_slug,post_slug):
+    this_topic = Topic.objects.get(slug=topic_slug)
+    post = Post.objects.get(slug=post_slug)
     all_topics = Topic.objects.all()
     similar_posts = post.tag.similar_objects()[:2]
     return render(request,'blog/post.html',{'topic':this_topic,'post':post,'all_topics':all_topics,'similar_posts':similar_posts})
