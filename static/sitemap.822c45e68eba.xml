@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.abhishekjaiswal.net/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/about/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/contactme/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/t/django/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/register/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/login/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/t/django/django-taggit/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/tags/django/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/t/django/djnago-rest-framework/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/tags/rest-api/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/t/django/image-sharing-app/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/tags/basics/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abhishekjaiswal.net/tags/image/</loc>
+  <lastmod>2020-07-05T07:31:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
